@@ -7,7 +7,7 @@ export const About: React.FC<Props> = (props) => {
         <h1 className="font-semibold text-4xl max-[900px]:text-2xl max-[400px]:text-xl">
           About me
         </h1>
-        <p className="text-center text-xl max-[900px]:text-base max-[400px]:text-sm">
+        <p className="text-center mt-2 space-y-3 text-xl max-[900px]:text-base max-[400px]:text-sm">
           I am a full-stack developer who works with modern web technologies and creates
           well-thought-out, fast and functional applications. I strive to build projects that really
           solve user problems, from the interface to the backend. I like to do “my own thing”:

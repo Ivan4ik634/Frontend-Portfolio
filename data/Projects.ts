@@ -22,7 +22,7 @@ export const Projects: ProjectT[] = [
     image: '/projects/white-netflix.png',
     description:
       'A Netflix-inspired web application built with modern technologies, focused on clean UI and smooth user experience. The platform allows users to browse movies, view details, and explore categorized content. It features dynamic routing, responsive design, and optimized performance for fast navigation. This project demonstrates skills in frontend architecture, state management, and building scalable user interfaces similar to real-world streaming platforms.',
-    link: 'https://your-link-here.com',
+    link: 'https://white-netflix.vercel.app',
     tags: ['Next.js', 'React', 'TypeScript', 'Supabase', 'TailwindCSS'],
   },
   {
