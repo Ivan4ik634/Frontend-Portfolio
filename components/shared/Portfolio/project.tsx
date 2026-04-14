@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/badge';
 import { ProjectT } from '@/types/project';
 import Link from 'next/link';
 
@@ -14,9 +15,7 @@ export const Project: React.FC<Props> = ({ project }) => {
         <p>{project.description}</p>
         <div className="flex w-full flex-wrap mt-4 gap-2">
           {project.tags.map((tag) => (
-            <div className="p-2 rounded-[5px] bg-zinc-100 dark:bg-zinc-900 ">
-              <p>{tag}</p>
-            </div>
+            <Badge variant={'outline'}>{tag}</Badge>
           ))}
         </div>
       </div>
