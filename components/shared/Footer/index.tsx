@@ -1,80 +1,114 @@
 'use client';
+
+import { Button } from '@/components/ui/button';
 import { LinksData } from '@/data/linksData';
 import { SocialMedia } from '@/data/socialMedia';
 import { useThemes } from '@/hooks/useTheme';
-import { Github, Moon, Sun } from 'lucide-react';
+import { Github, Moon, Send, Sun } from 'lucide-react';
 import Link from 'next/link';
+
 interface Props {}
 
-export const Footer: React.FC<Props> = (props) => {
+export const Footer: React.FC<Props> = () => {
   const { theme, setTheme } = useThemes();
 
   return (
-    <footer className="border-t py-20 flex flex-col ">
-      <div className="flex justify-between">
-        <p className="text-center opacity-50">© Ivan 2024</p>
-        <div />
-        <div />
-        <div>
-          <p className="mb-2 opacity-50">Links</p>
-          <div className="gap-y-4 flex flex-col">
-            {LinksData.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                className="duration-300 transition-all hover:text-red-400 hover:scale-[1.05] cursor-pointer"
-              >
-                {link.text}
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="flex max-[400px]:hidden flex-col gap-y-4">
-          {SocialMedia.map((soc) => (
-            <Link key={soc.url} target="_blank" href={soc.url}>
-              <div className="opacity-50 p-2 hover:opacity-100 duration-300 transition-all">
-                <img src={soc.svg} className="w-[25px] h-[25px]" />
-              </div>
-            </Link>
-          ))}
-          <Link target="_blank" href={'https://github.com/Ivan4ik634'}>
-            <div className="opacity-50 p-2 hover:opacity-100 duration-300 transition-all">
-              <Github className="w-[25px] h-[25px]" />
+    <footer id="contact" className="static w-full h-auto pt-24">
+      <div className="w-full  border-zinc-200 bg-zinc-950 p-8 text-white shadow-2xl shadow-zinc-950/15 dark:border-white/10 dark:bg-white/[0.04] lg:p-12">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-300">
+              Contact
+            </p>
+            <h2 className="max-w-2xl text-4xl font-semibold tracking-tight max-[640px]:text-3xl">
+              Have a product idea or a serious interface to build?
+            </h2>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-300">
+              I am open to full-stack product work, founder-style prototypes, and modern web
+              applications where the user experience matters.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button
+                asChild
+                className="rounded-full bg-white px-6 text-zinc-950 transition-all hover:-translate-y-0.5 hover:bg-blue-300">
+                <a href="https://t.me/WhiteDev15" target="_blank" rel="noreferrer">
+                  <Send />
+                  Contact me
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-white/15 bg-white/5 px-6 text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 hover:text-blue-200">
+                <Link target="_blank" href="https://github.com/Ivan4ik634" rel="noreferrer">
+                  <Github />
+                  GitHub
+                </Link>
+              </Button>
             </div>
-          </Link>
-        </div>
-      </div>
-      <div className="flex items-center mt-5 justify-between">
-        <div className="hidden max-[400px]:flex gap-x-4">
-          {SocialMedia.map((soc) => (
-            <Link key={soc.url} target="_blank" href={soc.url}>
-              <div className="opacity-50 p-2 hover:opacity-100 duration-300 transition-all">
-                <img src={soc.svg} className="w-[25px] h-[25px]" />
+          </div>
+
+          <div className="flex flex-col justify-between gap-8">
+            <div className="grid grid-cols-2 gap-8 max-[420px]:grid-cols-1">
+              <div>
+                <p className="mb-4 text-sm text-zinc-400">Navigation</p>
+                <div className="flex flex-col gap-3">
+                  {LinksData.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      className="text-zinc-300 transition-colors hover:text-blue-300">
+                      {link.text}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </Link>
-          ))}
-          <Link target="_blank" href={'https://github.com/Ivan4ik634'}>
-            <div className="opacity-50 p-2 hover:opacity-100 duration-300 transition-all">
-              <Github className="w-[25px] h-[25px]" />
+              <div>
+                <p className="mb-4 text-sm text-zinc-400">Social</p>
+                <div className="flex items-center gap-3">
+                  {SocialMedia.map((soc) => (
+                    <Link
+                      key={soc.url}
+                      target="_blank"
+                      href={soc.url}
+                      rel="noreferrer"
+                      className="rounded-full border border-white/10 bg-white/5 p-2 transition-all hover:-translate-y-0.5 hover:border-blue-300/40">
+                      <img src={soc.svg} className="size-5" alt="" />
+                    </Link>
+                  ))}
+                  <Link
+                    target="_blank"
+                    href="https://github.com/Ivan4ik634"
+                    rel="noreferrer"
+                    className="rounded-full border border-white/10 bg-white/5 p-2 transition-all hover:-translate-y-0.5 hover:border-blue-300/40">
+                    <Github className="size-5" />
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Link>
+
+            <div className="flex items-center justify-between border-t border-white/10 pt-6">
+              <p className="text-sm text-zinc-400">
+                © Designed & developed by Ivan. {new Date().getFullYear()}
+              </p>
+              {theme === 'light' ? (
+                <button
+                  aria-label="Switch to dark mode"
+                  onClick={() => setTheme('dark')}
+                  className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-300 transition-all hover:text-blue-300">
+                  <Moon />
+                </button>
+              ) : (
+                <button
+                  aria-label="Switch to light mode"
+                  onClick={() => setTheme('light')}
+                  className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-300 transition-all hover:text-blue-300">
+                  <Sun />
+                </button>
+              )}
+            </div>
+          </div>
         </div>
-        <div />
-        {theme === 'light' ? (
-          <div
-            onClick={() => setTheme('dark')}
-            className="opacity-50 cursor-pointer p-2 hover:opacity-100 duration-300 transition-all"
-          >
-            <Moon />
-          </div>
-        ) : (
-          <div
-            onClick={() => setTheme('light')}
-            className="opacity-50 cursor-pointer p-2 hover:opacity-100 duration-300 transition-all"
-          >
-            <Sun />
-          </div>
-        )}
       </div>
     </footer>
   );

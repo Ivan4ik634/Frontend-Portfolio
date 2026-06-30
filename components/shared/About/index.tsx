@@ -1,21 +1,28 @@
 interface Props {}
 
-export const About: React.FC<Props> = (props) => {
+export const About: React.FC<Props> = () => {
   return (
-    <div id={'about'} className="w-full flex  py-[125px] items-center justify-center">
-      <div className="w-[1200px] max-[900px]:w-full flex flex-col items-center">
-        <h1 className="font-semibold text-4xl max-[900px]:text-2xl max-[400px]:text-xl">
-          About me
-        </h1>
-        <p className="text-center mt-2 space-y-1 text-xl max-[900px]:text-base max-[400px]:text-sm">
-          I am a full-stack developer who works with modern web technologies and creates
-          well-thought-out, fast and functional applications. I strive to build projects that really
-          solve user problems, from the interface to the backend. I like to do “my own thing”:
-          create products from scratch, improve their architecture, experiment with new approaches
-          and develop more complex projects. My goal is to become more professional in web
-          development, expand my technical skills, work on strong systems and implement my own
-          ideas.
-        </p>
+    <div id="about" className="reveal py-24">
+      <div className=" gap-10 rounded-[28px] border border-zinc-200 bg-white/70 p-8 shadow-xl shadow-zinc-950/[0.04] backdrop-blur dark:border-white/10 dark:bg-white/[0.03] lg:grid-cols-[0.8fr_1.2fr] lg:p-12">
+        <div>
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
+            About
+          </p>
+          <h2 className="text-[34px] mb-3 font-semibold tracking-tight text-zinc-950 dark:text-white max-[640px]:text-3xl">
+            Product-minded engineering with a sharp eye for interface quality.
+          </h2>
+        </div>
+        <div className="space-y-5 text-lg leading-8 text-zinc-600 dark:text-zinc-300 max-[640px]:text-base">
+          <p>
+            I build full-stack applications from the first product idea to the deployed interface.
+            My work balances clean UI, maintainable architecture, fast feedback loops, and the small
+            details that make software feel trustworthy.
+          </p>
+          <p>
+            I enjoy creating products from scratch, improving system structure, and turning complex
+            workflows into calm, readable experiences for users.
+          </p>
+        </div>
       </div>
     </div>
   );

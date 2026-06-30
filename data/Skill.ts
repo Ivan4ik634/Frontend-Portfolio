@@ -4,8 +4,8 @@ export const skillsData = [
   {
     title: 'Frontend',
     icon: Globe,
-    color: 'text-red-400',
-    bg: 'bg-red-400/50',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
     items: [
       'Next.js',
       'React',
@@ -20,22 +20,22 @@ export const skillsData = [
   {
     title: 'Backend',
     icon: Database,
-    color: 'text-red-400',
-    bg: 'bg-red-400/50',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
     items: ['Nest.js', 'Supabase', 'Node.js', 'JWT', 'Livekit', 'SendGrid', 'Cloudinary', 'Bcrypt'],
   },
   {
     title: 'Deploy',
     icon: ServerIcon,
-    color: 'text-red-400',
-    bg: 'bg-red-400/50',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
     items: ['Vercel', 'Render', 'Raiway'],
   },
   {
     title: 'Tools',
     icon: Wrench,
-    color: 'text-red-400',
-    bg: 'bg-red-400/50',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
     items: ['TypeScript', 'MongoDB', 'Git', 'VSCode', 'Socket.io', 'SEO'],
   },
 ];

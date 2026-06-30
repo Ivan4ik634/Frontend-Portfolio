@@ -9,10 +9,14 @@ export const LinksData = [
   },
   {
     url: '#skills',
-    text: 'Skills',
+    text: 'Stack',
   },
   {
     url: '#portfolio',
-    text: 'Portfolio',
+    text: 'Projects',
+  },
+  {
+    url: '#contact',
+    text: 'Contact',
   },
 ];
