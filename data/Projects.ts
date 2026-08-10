@@ -29,6 +29,15 @@ export const Projects: ProjectT[] = [
     github: 'https://github.com/Ivan4ik634/Frontend-White-Netflix',
     tags: ['Next.js', 'React', 'TypeScript', 'Supabase', 'TailwindCSS'],
   },
+  {
+    title: 'Pizzeria Napoli',
+    image: '/projects/pizzeria-napoli.png',
+    description:
+      'Moderne Website für eine authentische italienische Pizzeria mit Fokus auf Pizza, frische Zutaten und traditionelles Handwerk.',
+    link: 'https://pizzeria-napoli-livid.vercel.app',
+    github: 'https://github.com/Ivan4ik634/Frontend-Pizzeria-Napoli',
+    tags: ['Web Design', 'React', 'UI/UX', 'TypeScript', 'Next.js'],
+  },
 
   {
     title: 'Miro Clone',
