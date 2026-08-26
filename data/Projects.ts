@@ -19,7 +19,6 @@ export const Projects: ProjectT[] = [
       'AI',
     ],
   },
-
   {
     title: 'Netflix Clone',
     image: '/projects/white-netflix.png',
@@ -28,15 +27,6 @@ export const Projects: ProjectT[] = [
     link: 'https://white-netflix.vercel.app',
     github: 'https://github.com/Ivan4ik634/Frontend-White-Netflix',
     tags: ['Next.js', 'React', 'TypeScript', 'Supabase', 'TailwindCSS'],
-  },
-  {
-    title: 'Pizzeria Napoli',
-    image: '/projects/pizzeria-napoli.png',
-    description:
-      'Moderne Website für eine authentische italienische Pizzeria mit Fokus auf Pizza, frische Zutaten und traditionelles Handwerk.',
-    link: 'https://pizzeria-napoli-livid.vercel.app',
-    github: 'https://github.com/Ivan4ik634/Frontend-Pizzeria-Napoli',
-    tags: ['Web Design', 'React', 'UI/UX', 'TypeScript', 'Next.js'],
   },
 
   {
@@ -56,5 +46,23 @@ export const Projects: ProjectT[] = [
       'Stripe',
       'TailwindCSS',
     ],
+  },
+  {
+    title: 'Pizzeria Napoli',
+    image: '/projects/pizzeria-napoli.png',
+    description:
+      'Moderne Website für eine authentische italienische Pizzeria mit Fokus auf Pizza, frische Zutaten und traditionelles Handwerk.',
+    link: 'https://pizzeria-napoli-livid.vercel.app',
+    github: 'https://github.com/Ivan4ik634/Frontend-Pizzeria-Napoli',
+    tags: ['Web Design', 'React', 'UI/UX', 'TypeScript', 'Next.js'],
+  },
+  {
+    title: 'Vexora Ai',
+    image: '/projects/visora-ai.png',
+    description:
+      'Modern landing page design for a digital creative platform, with a clear focus on innovative technologies, modern aesthetics, and a high-quality user experience.',
+    link: 'https://visora-ai-eosin.vercel.app',
+    github: 'https://github.com/Ivan4ik634/Frontend-Visora-AiJ',
+    tags: ['Web Design', 'React', 'UI/UX', 'TypeScript', 'Next.js'],
   },
 ];
