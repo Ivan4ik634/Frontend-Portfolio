@@ -65,24 +65,17 @@ export const Footer: React.FC<Props> = () => {
               </div>
               <div>
                 <p className="mb-4 text-sm text-zinc-400">Social</p>
-                <div className="flex items-center gap-3">
+                <div className="grid grid-cols-4 w-[200px] gap-3">
                   {SocialMedia.map((soc) => (
                     <Link
                       key={soc.url}
                       target="_blank"
                       href={soc.url}
                       rel="noreferrer"
-                      className="rounded-full border border-white/10 bg-white/5 p-2 transition-all hover:-translate-y-0.5 hover:border-blue-300/40">
-                      <img src={soc.svg} className="size-5" alt="" />
+                      className="rounded-full border w-min border-white/10 bg-white/5 p-2 transition-all hover:-translate-y-0.5 hover:border-blue-300/40">
+                      <soc.icon className="size-5" />
                     </Link>
                   ))}
-                  <Link
-                    target="_blank"
-                    href="https://github.com/Ivan4ik634"
-                    rel="noreferrer"
-                    className="rounded-full border border-white/10 bg-white/5 p-2 transition-all hover:-translate-y-0.5 hover:border-blue-300/40">
-                    <Github className="size-5" />
-                  </Link>
                 </div>
               </div>
             </div>

@@ -1,10 +1,33 @@
+import { FaDiscord, FaDribbble, FaGithub, FaInstagram, FaTelegram, FaTiktok } from 'react-icons/fa';
+import { FaThreads } from 'react-icons/fa6';
+
 export const SocialMedia = [
   {
-    svg: 'https://www.svgrepo.com/show/353655/discord-icon.svg',
-    url: 'https://discord.com/users/ivan014539',
+    url: 'https://github.com/WhiteDev15',
+    icon: FaGithub,
   },
   {
-    svg: 'https://www.svgrepo.com/show/343522/telegram-communication-chat-interaction-network-connection.svg',
     url: 'https://t.me/WhiteDev15',
+    icon: FaTelegram,
+  },
+  {
+    url: 'https://discord.com/users/ivan014539',
+    icon: FaDiscord,
+  },
+  {
+    url: 'https://www.threads.com/@white_fullstack',
+    icon: FaThreads,
+  },
+  {
+    url: 'https://www.instagram.com/white_fullstack',
+    icon: FaInstagram,
+  },
+  {
+    url: 'https://dribbble.com/whiteform',
+    icon: FaDribbble,
+  },
+  {
+    url: 'https://tiktok.com/@whiteformdeveloper',
+    icon: FaTiktok,
   },
 ];
