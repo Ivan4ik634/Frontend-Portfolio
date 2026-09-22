@@ -1,7 +1,7 @@
 export type ProjectT = {
   title: string;
   image: string;
-  description: string;
+  descriptionKey: string;
   link: string;
   github?: string;
   featured?: boolean;

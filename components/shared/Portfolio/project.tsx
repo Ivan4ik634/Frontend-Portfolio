@@ -1,5 +1,8 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/i18n';
 import { ProjectT } from '@/types/project';
 import { ExternalLink, Github } from 'lucide-react';
 
@@ -8,6 +11,7 @@ interface Props {
 }
 
 export const Project: React.FC<Props> = ({ project }) => {
+  const { t } = useTranslation();
   return (
     <article
       className={`group flex flex-col overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-zinc-950/[0.08] dark:border-white/10 dark:bg-white/[0.03] ${
@@ -19,7 +23,7 @@ export const Project: React.FC<Props> = ({ project }) => {
           className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
             project.featured ? 'aspect-[16/8]' : 'aspect-video'
           }`}
-          alt={`${project.title} preview`}
+          alt={t('portfolio.previewAlt', { title: project.title })}
         />
       </a>
       <div className="flex flex-1 flex-col p-6">
@@ -29,12 +33,12 @@ export const Project: React.FC<Props> = ({ project }) => {
           </h3>
           {project.featured && (
             <Badge className="rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-300">
-              Featured
+              {t('portfolio.featured')}
             </Badge>
           )}
         </div>
         <p className="line-clamp-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-          {project.description}
+          {t(`portfolio.projectDescriptions.${project.descriptionKey}`)}
         </p>
         <div className="mt-5 flex w-full flex-wrap gap-2">
           {project.tags.map((tag) => (
@@ -52,7 +56,7 @@ export const Project: React.FC<Props> = ({ project }) => {
             className="rounded-full bg-zinc-950 px-5 transition-all hover:-translate-y-0.5 hover:bg-blue-600 dark:bg-white dark:text-zinc-950 dark:hover:bg-blue-300">
             <a href={project.link} target="_blank" rel="noreferrer">
               <ExternalLink />
-              Live Demo
+              {t('portfolio.liveDemo')}
             </a>
           </Button>
           {project.github && (

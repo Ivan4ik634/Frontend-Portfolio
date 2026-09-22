@@ -1,22 +1,22 @@
 export const LinksData = [
   {
     url: '#home',
-    text: 'Home',
+    key: 'home',
   },
   {
     url: '#about',
-    text: 'About',
+    key: 'about',
   },
   {
     url: '#skills',
-    text: 'Stack',
+    key: 'stack',
   },
   {
     url: '#portfolio',
-    text: 'Projects',
+    key: 'projects',
   },
   {
     url: '#contact',
-    text: 'Contact',
+    key: 'contact',
   },
 ];

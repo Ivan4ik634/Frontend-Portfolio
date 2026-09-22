@@ -2,7 +2,7 @@ import { Database, Globe, ServerIcon, Wrench } from 'lucide-react';
 
 export const skillsData = [
   {
-    title: 'Frontend',
+    titleKey: 'frontend',
     icon: Globe,
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
@@ -18,21 +18,21 @@ export const skillsData = [
     ],
   },
   {
-    title: 'Backend',
+    titleKey: 'backend',
     icon: Database,
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
     items: ['Nest.js', 'Supabase', 'Node.js', 'JWT', 'Livekit', 'SendGrid', 'Cloudinary', 'Bcrypt'],
   },
   {
-    title: 'Deploy',
+    titleKey: 'deploy',
     icon: ServerIcon,
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
-    items: ['Vercel', 'Render', 'Raiway'],
+    items: ['Vercel', 'Render', 'Railway'],
   },
   {
-    title: 'Tools',
+    titleKey: 'tools',
     icon: Wrench,
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
@@ -43,142 +43,133 @@ export const skillsHoverData = {
   frontend: [
     {
       title: 'Next.js',
-      description: 'A React framework for server-side rendering and static website generation.',
+      descriptionKey: 'nextjs',
       logo: 'https://nextjs.org/favicon.ico',
     },
     {
       title: 'React',
-      description: 'A JavaScript library for building user interfaces, developed by Facebook.',
+      descriptionKey: 'react',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
     },
     {
       title: 'Zustand',
-      description: 'A minimal and fast state management library for React.',
+      descriptionKey: 'zustand',
       logo: 'https://zustand-demo.pmnd.rs/favicon.ico',
     },
     {
       title: 'TailwindCSS',
-      description: 'A utility-first CSS framework for creating custom designs.',
+      descriptionKey: 'tailwind',
       logo: 'https://tailwindcss.com/favicon.ico',
     },
     {
       title: 'React-Query',
-      description: 'A data fetching and state management library for React.',
+      descriptionKey: 'reactQuery',
       logo: 'https://tanstack.com/favicon.ico',
     },
     {
       title: 'React-Hook-Form',
-      description:
-        'A library for handling forms in React, supporting validation and state management.',
+      descriptionKey: 'reactHookForm',
       logo: '',
     },
     {
       title: 'Axios',
-      description: 'A promise-based HTTP client for JavaScript, used to make HTTP requests.',
+      descriptionKey: 'axios',
       logo: 'https://www.axios.com/favicon.ico',
     },
     {
       title: 'Framer Motion',
-      description: 'A library for animations in React.',
+      descriptionKey: 'framerMotion',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Framer_Motion_logo.svg',
     },
   ],
   backend: [
     {
       title: 'Nest.js',
-      description:
-        'A progressive Node.js framework for building efficient and scalable server-side applications.',
+      descriptionKey: 'nestjs',
       logo: 'https://nestjs.com/logo-small-gradient.0ed287ce.svg',
     },
     {
       title: 'Supabase',
-      description:
-        'Implemented backend infrastructure using Supabase as a scalable open-source alternative to Firebase.',
+      descriptionKey: 'supabase',
       logo: 'https://supabase.com/_next/image?url=https%3A%2F%2Ffrontend-assets.supabase.com%2Fwww%2F69bbbd1ebf42%2F_next%2Fstatic%2Fmedia%2Flogo-preview.50e72501.jpg&w=3840&q=75',
     },
     {
       title: 'Node.js',
-      description:
-        "A JavaScript runtime built on Chrome's V8 JavaScript engine for building scalable network applications.",
+      descriptionKey: 'nodejs',
       logo: 'https://nodejs.org/static/images/favicons/favicon.png',
     },
     {
       title: 'JWT',
-      description:
-        'JSON Web Token is an open standard for securely transmitting information between parties as a JSON object.',
+      descriptionKey: 'jwt',
       logo: 'https://www.jwt.io/favicon.ico',
     },
     {
       title: 'Livekit',
-      description: 'A platform for building live video and audio applications.',
+      descriptionKey: 'livekit',
       logo: 'https://livekit.io/favicon.ico',
     },
     {
       title: 'SendGrid',
-      description:
-        'A cloud-based email delivery service for sending transactional and marketing emails.',
+      descriptionKey: 'sendgrid',
       logo: 'https://www.sendgrid.com/favicon.ico',
     },
     {
       title: 'Cloudinary',
-      description: 'A cloud service for managing and delivering images and videos.',
+      descriptionKey: 'cloudinary',
       logo: 'https://cloudinary.com/favicon.ico',
     },
     {
       title: 'Bcrypt',
-      description: 'A library to hash passwords in Node.js applications securely.',
+      descriptionKey: 'bcrypt',
       logo: '',
     },
   ],
   deploy: [
     {
       title: 'Vercel',
-      description: 'A platform for frontend frameworks and static sites, optimized for Next.js.',
+      descriptionKey: 'vercel',
       logo: 'https://vercel.com/favicon.ico',
     },
     {
       title: 'Render',
-      description: 'A cloud platform for deploying applications and websites.',
+      descriptionKey: 'render',
       logo: 'https://render.com/favicon.ico',
     },
     {
       title: 'Railway',
-      description: 'A platform for deploying and managing apps with minimal configuration.',
+      descriptionKey: 'railway',
       logo: 'https://railway.app/favicon.ico',
     },
   ],
   tools: [
     {
       title: 'TypeScript',
-      description: 'A superset of JavaScript that adds static types.',
+      descriptionKey: 'typescript',
       logo: 'https://www.typescriptlang.org/favicon.ico',
     },
     {
       title: 'MongoDB',
-      description: 'A NoSQL database that uses a document-oriented data model.',
+      descriptionKey: 'mongodb',
       logo: 'https://www.mongodb.com/favicon.ico',
     },
     {
       title: 'Git',
-      description:
-        'A version control system for tracking changes in source code during software development.',
+      descriptionKey: 'git',
       logo: 'https://git-scm.com/favicon.ico',
     },
     {
       title: 'VSCode',
-      description: 'A free, open-source code editor developed by Microsoft for web development.',
+      descriptionKey: 'vscode',
       logo: 'https://code.visualstudio.com/favicon.ico',
     },
     {
       title: 'Socket.io',
-      description:
-        'A library for real-time web applications that enables bi-directional communication.',
+      descriptionKey: 'socketio',
       logo: 'https://socket.io/images/logo-dark.svg',
     },
     {
       title: 'SEO',
-      description:
-        'Search Engine Optimization, the process of optimizing a website to rank higher on search engines.',
+      descriptionKey: 'seo',
       logo: '',
     },
   ],

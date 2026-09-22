@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { LinksData } from '@/data/linksData';
 import { SocialMedia } from '@/data/socialMedia';
 import { useThemes } from '@/hooks/useTheme';
+import { useTranslation } from '@/i18n';
 import { Github, Moon, Send, Sun } from 'lucide-react';
 import Link from 'next/link';
 
@@ -11,6 +12,7 @@ interface Props {}
 
 export const Footer: React.FC<Props> = () => {
   const { theme, setTheme } = useThemes();
+  const { t } = useTranslation();
 
   return (
     <footer id="contact" className="static w-full h-auto pt-24">
@@ -18,22 +20,19 @@ export const Footer: React.FC<Props> = () => {
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-300">
-              Contact
+              {t('footer.eyebrow')}
             </p>
             <h2 className="max-w-2xl text-4xl font-semibold tracking-tight max-[640px]:text-3xl">
-              Have a product idea or a serious interface to build?
+              {t('footer.title')}
             </h2>
-            <p className="mt-5 max-w-xl leading-7 text-zinc-300">
-              I am open to full-stack product work, founder-style prototypes, and modern web
-              applications where the user experience matters.
-            </p>
+            <p className="mt-5 max-w-xl leading-7 text-zinc-300">{t('footer.description')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button
                 asChild
                 className="rounded-full bg-white px-6 text-zinc-950 transition-all hover:-translate-y-0.5 hover:bg-blue-300">
                 <a href="https://t.me/WhiteDev15" target="_blank" rel="noreferrer">
                   <Send />
-                  Contact me
+                  {t('footer.contactMe')}
                 </a>
               </Button>
               <Button
@@ -51,20 +50,20 @@ export const Footer: React.FC<Props> = () => {
           <div className="flex flex-col justify-between gap-8">
             <div className="grid grid-cols-2 gap-8 max-[420px]:grid-cols-1">
               <div>
-                <p className="mb-4 text-sm text-zinc-400">Navigation</p>
+                <p className="mb-4 text-sm text-zinc-400">{t('footer.navigation')}</p>
                 <div className="flex flex-col gap-3">
                   {LinksData.map((link) => (
                     <a
                       key={link.url}
                       href={link.url}
                       className="text-zinc-300 transition-colors hover:text-blue-300">
-                      {link.text}
+                      {t(`navigation.${link.key}`)}
                     </a>
                   ))}
                 </div>
               </div>
               <div>
-                <p className="mb-4 text-sm text-zinc-400">Social</p>
+                <p className="mb-4 text-sm text-zinc-400">{t('footer.social')}</p>
                 <div className="grid grid-cols-4 w-[200px] gap-3">
                   {SocialMedia.map((soc) => (
                     <Link
@@ -82,18 +81,18 @@ export const Footer: React.FC<Props> = () => {
 
             <div className="flex items-center justify-between border-t border-white/10 pt-6">
               <p className="text-sm text-zinc-400">
-                © Designed & developed by Ivan. {new Date().getFullYear()}
+                {t('footer.copyright')} {new Date().getFullYear()}
               </p>
               {theme === 'light' ? (
                 <button
-                  aria-label="Switch to dark mode"
+                  aria-label={t('theme.switchToDark')}
                   onClick={() => setTheme('dark')}
                   className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-300 transition-all hover:text-blue-300">
                   <Moon />
                 </button>
               ) : (
                 <button
-                  aria-label="Switch to light mode"
+                  aria-label={t('theme.switchToLight')}
                   onClick={() => setTheme('light')}
                   className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-300 transition-all hover:text-blue-300">
                   <Sun />

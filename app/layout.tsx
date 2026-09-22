@@ -1,3 +1,4 @@
+import { I18nProvider } from '@/i18n';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Ivan | Portfolio',
-  description: 'Premium full-stack developer portfolio for product-focused web applications.',
+  title: 'Іван | Портфоліо',
+  description: 'Портфоліо full-stack розробника для продуктових вебзастосунків.',
 };
 
 export default function RootLayout({
@@ -23,8 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="dark" lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html className="dark" lang="uk">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <I18nProvider>{children}</I18nProvider>
+      </body>
     </html>
   );
 }
