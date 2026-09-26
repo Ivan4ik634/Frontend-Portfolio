@@ -2,6 +2,24 @@ import { ProjectT } from '@/types/project';
 
 export const Projects: ProjectT[] = [
   {
+    title: 'Arngren Store',
+    image: '/projects/arngren-store.png',
+    descriptionKey: 'arngren',
+    link: 'https://arngren-store.vercel.app',
+    featured: true,
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Supabase',
+      'TailwindCSS',
+      'Web Design',
+      'UI/UX',
+      'OAuth',
+    ],
+  },
+
+  {
     title: 'Claro',
     image: '/projects/claro.png',
     descriptionKey: 'claro',
@@ -18,6 +36,7 @@ export const Projects: ProjectT[] = [
       'AI',
     ],
   },
+
   {
     title: 'Netflix Clone',
     image: '/projects/white-netflix.png',
@@ -44,6 +63,7 @@ export const Projects: ProjectT[] = [
       'TailwindCSS',
     ],
   },
+
   {
     title: 'Pizzeria Napoli',
     image: '/projects/pizzeria-napoli.png',
@@ -52,6 +72,7 @@ export const Projects: ProjectT[] = [
     github: 'https://github.com/Ivan4ik634/Frontend-Pizzeria-Napoli',
     tags: ['Web Design', 'React', 'UI/UX', 'TypeScript', 'Next.js'],
   },
+
   {
     title: 'Vexora Ai',
     image: '/projects/visora-ai.png',

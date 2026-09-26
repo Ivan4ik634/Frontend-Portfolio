@@ -3,7 +3,7 @@ import { FaThreads } from 'react-icons/fa6';
 
 export const SocialMedia = [
   {
-    url: 'https://github.com/WhiteDev15',
+    url: 'https://github.com/Ivan4ik634',
     icon: FaGithub,
   },
   {

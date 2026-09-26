@@ -47,6 +47,8 @@ const en: DictionaryShape<typeof uk> = {
     liveDemo: 'Live Demo',
     previewAlt: 'Preview of {{title}} project',
     projectDescriptions: {
+      arngren:
+        ' A modern e-commerce platform with responsive layouts, dynamic routing, and optimized performance. Features include authentication, Stripe integration, and a scalable full-stack backend.',
       claro:
         'A collaborative whiteboard for real-time teamwork with AI-powered features and a polished user experience. Built with Next.js, TypeScript, Supabase, and modern frontend technologies.',
       netflix:

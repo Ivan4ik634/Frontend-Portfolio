@@ -8,7 +8,7 @@ export const About: React.FC<Props> = () => {
   const { t } = useTranslation();
   return (
     <div id="about" className="reveal py-24">
-      <div className=" gap-10 rounded-[28px] border border-zinc-200 bg-white/70 p-8 shadow-xl shadow-zinc-950/[0.04] backdrop-blur dark:border-white/10 dark:bg-white/[0.03] lg:grid-cols-[0.8fr_1.2fr] lg:p-12">
+      <div className=" gap-10  lg:grid-cols-[0.8fr_1.2fr] ">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
             {t('about.eyebrow')}
