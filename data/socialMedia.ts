@@ -7,7 +7,7 @@ export const SocialMedia = [
     icon: FaGithub,
   },
   {
-    url: 'https://t.me/WhiteDev15',
+    url: 'https://t.me',
     icon: FaTelegram,
   },
   {
