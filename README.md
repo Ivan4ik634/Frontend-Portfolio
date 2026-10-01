@@ -2,11 +2,11 @@
 
 Personal portfolio website built with Next.js and TypeScript.
 
-## 🌐 Live Demo
+## Live Demo
 
 **[white-portfolio-pearl.vercel.app](https://white-portfolio-pearl.vercel.app/)**
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-2026?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -14,7 +14,7 @@ Personal portfolio website built with Next.js and TypeScript.
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=for-the-badge)
 
-## ✨ Features
+## Features
 
 - Responsive design
 - Project showcase
@@ -24,7 +24,7 @@ Personal portfolio website built with Next.js and TypeScript.
 - Reusable UI components
 - Responsive navigation
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── app/          # Application routes and pages
@@ -38,7 +38,7 @@ Personal portfolio website built with Next.js and TypeScript.
 └── types/        # TypeScript types
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone the repository:
 
@@ -61,7 +61,7 @@ npm run dev
 
 Open `http://localhost:3000` in your browser.
 
-## 📦 Build
+## Build
 
 Create a production build:
 
@@ -75,6 +75,6 @@ Start the production server:
 npm start
 ```
 
-## 📄 License
+## License
 
 This project is for personal portfolio purposes.
