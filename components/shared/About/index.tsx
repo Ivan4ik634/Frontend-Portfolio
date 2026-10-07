@@ -1,13 +1,20 @@
 'use client';
 
 import { useTranslation } from '@/i18n';
+import { motion } from 'framer-motion';
 
 interface Props {}
 
 export const About: React.FC<Props> = () => {
   const { t } = useTranslation();
   return (
-    <div id="about" className="reveal py-24">
+    <motion.div
+      id="about"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="py-24">
       <div className=" gap-10  lg:grid-cols-[0.8fr_1.2fr] ">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
@@ -22,6 +29,6 @@ export const About: React.FC<Props> = () => {
           <p>{t('about.secondParagraph')}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

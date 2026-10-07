@@ -2,17 +2,24 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
+import { CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { skillsData, skillsHoverData } from '@/data/Skill';
 import { useTranslation } from '@/i18n';
+import { motion } from 'framer-motion';
 
 interface Props {}
 
 export const Skills: React.FC<Props> = (props) => {
   const { t } = useTranslation();
   return (
-    <div id="skills" className="reveal py-24">
+    <motion.div
+      id="skills"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="py-24">
       <div className="mb-12  gap-6 max-[640px]:flex-col max-[640px]:items-start">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
@@ -28,9 +35,11 @@ export const Skills: React.FC<Props> = (props) => {
       </div>
       <div className="grid grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[640px]:grid-cols-1">
         {skillsData.map((skill) => (
-          <Card
+          <motion.div
             key={skill.titleKey}
-            className="rounded-2xl border-zinc-200 bg-white/75 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-xl hover:shadow-zinc-950/[0.06] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-blue-400/30">
+            whileHover={{ y: -4 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+            className="rounded-2xl border border-zinc-200 bg-white/75 shadow-sm hover:border-blue-500/30 hover:shadow-xl hover:shadow-zinc-950/[0.06] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-blue-400/30">
             <CardContent className="p-6">
               <CardTitle className="gap-x-2 flex items-center">
                 <div className={`rounded-xl p-2.5 ${skill.bg}`}>
@@ -80,9 +89,9 @@ export const Skills: React.FC<Props> = (props) => {
                 })}
               </CardDescription>
             </CardContent>
-          </Card>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

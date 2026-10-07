@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Projects } from '@/data/Projects';
 import { useTranslation } from '@/i18n';
+import { motion } from 'framer-motion';
 
 interface Props {}
 
@@ -11,8 +12,13 @@ export const Preview: React.FC<Props> = (props) => {
   return (
     <div
       id="home"
-      className="reveal grid min-h-[calc(100vh-96px)] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
-      <div className="flex max-w-3xl flex-col items-start">
+      className="grid min-h-[calc(100vh-96px)] items-center gap-12 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: -24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="flex max-w-3xl flex-col items-start">
         <div className="mb-8 space-y-6">
           <p className="inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-300">
             {t('hero.eyebrow')}
@@ -38,8 +44,11 @@ export const Preview: React.FC<Props> = (props) => {
             </Button>
           </a>
         </div>
-      </div>
-      <div className="relative mx-auto w-full max-w-[440px]">
+      </motion.div>
+      <motion.div
+        animate={{ y: [0, -12, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        className="relative mx-auto w-full max-w-[440px]">
         <div className="absolute inset-6 rounded-full bg-blue-500/10 blur-3xl" />
         <img
           src="/Avatar.png"
@@ -62,7 +71,7 @@ export const Preview: React.FC<Props> = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

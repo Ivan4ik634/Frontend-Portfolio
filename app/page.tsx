@@ -13,8 +13,8 @@ export default function Home() {
         <Header />
         <div>
           <Preview />
-          <Portfolio />
           <About />
+          <Portfolio />
           <Skills />
         </div>
       </Container>

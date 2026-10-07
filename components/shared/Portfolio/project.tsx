@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/i18n';
 import { ProjectT } from '@/types/project';
+import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
 interface Props {
@@ -13,14 +14,18 @@ interface Props {
 export const Project: React.FC<Props> = ({ project }) => {
   const { t } = useTranslation();
   return (
-    <article
-      className={`group flex flex-col overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-zinc-950/[0.08] dark:border-white/10 dark:bg-white/[0.03] ${
+    <motion.article
+      whileHover={{ y: -4 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+      className={`group flex flex-col overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-sm hover:shadow-2xl hover:shadow-zinc-950/[0.08] dark:border-white/10 dark:bg-white/[0.03] ${
         project.featured ? 'lg:col-span-2' : ''
       }`}>
       <a href={project.link} target="_blank" rel="noreferrer" className="overflow-hidden">
-        <img
+        <motion.img
           src={project.image}
-          className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className={`w-full object-cover ${
             project.featured ? 'aspect-[16/8]' : 'aspect-video'
           }`}
           alt={t('portfolio.previewAlt', { title: project.title })}
@@ -75,6 +80,6 @@ export const Project: React.FC<Props> = ({ project }) => {
           )}
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };

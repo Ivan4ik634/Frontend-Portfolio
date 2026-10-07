@@ -2,6 +2,7 @@
 
 import { Projects } from '@/data/Projects';
 import { useTranslation } from '@/i18n';
+import { motion } from 'framer-motion';
 import { Project } from './project';
 
 interface Props {}
@@ -9,7 +10,13 @@ interface Props {}
 export const Portfolio: React.FC<Props> = (props) => {
   const { t } = useTranslation();
   return (
-    <div id="portfolio" className="reveal py-24">
+    <motion.div
+      id="portfolio"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      className="py-24">
       <div className="mb-12 max-w-3xl">
         <p className="mb-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
           {t('portfolio.eyebrow')}
@@ -24,6 +31,6 @@ export const Portfolio: React.FC<Props> = (props) => {
           <Project key={project.link} project={project} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
